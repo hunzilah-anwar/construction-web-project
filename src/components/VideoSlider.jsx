@@ -38,7 +38,7 @@ const VideoSlider = () => {
   const currentItem = slides[currentIndex];
 
   return (
-    <section className="relative w-full max-h-[90vh] overflow-hidden group">
+    <section className="relative w-full max-h-[90vh] overflow-hidden group lg:rounded-none rounded-t-4xl">
       {currentItem.type === "video 1" ? (
         <div className="relative">
           <video

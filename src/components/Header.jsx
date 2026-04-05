@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="font-saira relative overflow-hidden sm:px-16 px-10 py-14 flex flex-wrap lg:justify-between justify-center items-center gap-14 border-b border-gray-300">
+      <div className="font-saira relative overflow-hidden sm:px-16 px-10 py-14 flex flex-wrap lg:justify-between justify-center items-center gap-14">
         <div className="lg:block hidden absolute -right-28 top-0 -z-10 bg-black opacity-[.04] w-[70%] h-full -skew-x-45"></div>
         <Link to="/" className="">
           <img src={logo} className="w-70" alt="Buildify Logo" />
