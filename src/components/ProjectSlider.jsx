@@ -173,7 +173,7 @@ const ProjectSlider = () => {
   return (
     <section
       style={{ backgroundImage: `url(${projectBG})` }}
-      className="py-16 px-10 bg-cover bg-center"
+      className="py-16 px-5 bg-cover bg-center"
     >
       <div className="max-w-5xl m-auto flex flex-wrap justify-between items-center">
         <h2 className="font-saira text-2xl font-bold text-secondary">

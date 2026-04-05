@@ -52,7 +52,7 @@ const Home = () => {
       <VideoSlider />
       <section className="max-w-5xl m-auto">
         <div className="bg-primary text-white p-8 flex flex-wrap justify-center items-center gap-8 font-saira">
-          <h2 className="sm:text-lg text-sm">
+          <h2 className="sm:text-lg text-sm text-center">
             We provide fast and affordable service for your projects. Hire us!
           </h2>
           <Link
@@ -64,7 +64,7 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-5xl m-auto py-16">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-5">
           <div className="">
             <img src={service1} className="grayscale" alt="" />
             <h2 className=" font-saira font-semibold my-4 text-lg">
@@ -135,7 +135,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      <section className="max-w-5xl m-auto py-16 px-10">
+      <section className="max-w-5xl m-auto py-16 px-5">
         <div className="flex md:flex-nowrap flex-wrap justify-start items-start gap-8">
           <ul className="flex flex-col justify-start items-start gap-1 border-r-2 border-[#99A6BA] md:w-50 w-full">
             <li
@@ -289,8 +289,8 @@ const Home = () => {
       <section className="bg-[#F2F2F2]">
         <div className="max-w-5xl m-auto py-16 grid md:grid-cols-2 grid-cols-1 gap-8">
           <Testimonial />
-          <div className="">
-            <div className="flex justify-between items-center">
+          <div className="px-2">
+            <div className="flex flex-wrap justify-between items-center">
               <h1 className="text-3xl font-saira font-bold text-gray-800">
                 Company's News
               </h1>
@@ -306,7 +306,7 @@ const Home = () => {
               {posts.map((post) => (
                 <div
                   key={post.id}
-                  className="flex justify-start items-center gap-4 mt-8 bg-white cursor-pointer shadow-[1px_1px_0px_1px_rgb(221,221,221)] px-2"
+                  className="flex justify-start items-center gap-4 mt-8 bg-white cursor-pointer shadow-[1px_1px_0px_1px_rgb(221,221,221)]"
                 >
                   <img
                     src={post.image}
@@ -332,7 +332,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="max-w-6xl m-auto py-16 px-10">
+      <section className="max-w-6xl m-auto py-16 px-5">
         <ClientSlider />
       </section>
     </>

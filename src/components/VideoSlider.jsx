@@ -50,7 +50,7 @@ const VideoSlider = () => {
           >
             <source src={currentItem.src} type="video/mp4" />
           </video>
-          <div className="absolute top-0 right-0 w-full h-full px-22 flex flex-col justify-center  sm:items-center items-start bg-black/50">
+          <div className="absolute top-0 right-0 w-full h-full sm:px-22 px-5 flex flex-col justify-center  sm:items-center items-start bg-black/50">
             <h1 className="lg:text-6xl md:text-5xl text-4xl font-saira text-white font-bold">
               <span className="text-secondary">We Do</span> Big Things
             </h1>
@@ -70,7 +70,8 @@ const VideoSlider = () => {
             alt="slide"
             className="w-full h-[90vh] object-cover"
           />
-          <div className="absolute top-0 right-0 h-full px-22 flex flex-col justify-center sm:items-end items-start">
+          <div className="absolute top-0 right-0 w-full h-full sm:px-22 px-5 flex flex-col justify-center  sm:items-center items-start bg-black/20"></div>
+          <div className="absolute top-0 right-0 h-full sm:px-22 px-5 flex flex-col justify-center sm:items-end items-start">
             <h1 className="lg:text-6xl md:text-5xl text-4xl font-saira text-white font-bold">
               Construction <span className="text-primary">Services</span>
             </h1>
@@ -90,7 +91,8 @@ const VideoSlider = () => {
             alt="slide"
             className="w-full h-[90vh] object-cover"
           />
-          <div className="absolute top-0 right-0 w-full h-full px-22 flex flex-col justify-center sm:items-end items-start">
+          <div className="absolute top-0 right-0 w-full h-full sm:px-22 px-5 flex flex-col justify-center  sm:items-center items-start bg-black/40"></div>
+          <div className="absolute top-0 right-0 w-full h-full sm:px-22 px-5 flex flex-col justify-center sm:items-end items-start">
             <h1 className="lg:text-6xl md:text-5xl text-4xl font-saira text-white font-bold">
               We Are <span className="text-secondary">Mega Project</span>
             </h1>
@@ -109,7 +111,7 @@ const VideoSlider = () => {
       {/* Left Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 cursor-pointer text-white group-hover:opacity-100 opacity-0 transition-all"
+        className="absolute sm:block hidden left-5 top-1/2 -translate-y-1/2 cursor-pointer text-white group-hover:opacity-100 opacity-0 transition-all"
       >
         <RiArrowLeftWideFill size={60} />
       </button>
@@ -117,7 +119,7 @@ const VideoSlider = () => {
       {/* Right Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer text-white group-hover:opacity-100 opacity-0 transition-all"
+        className="absolute sm:block hidden right-5 top-1/2 -translate-y-1/2 cursor-pointer text-white group-hover:opacity-100 opacity-0 transition-all"
       >
         <RiArrowRightWideFill size={60} />
       </button>

@@ -74,7 +74,7 @@ const Footer = () => {
           <h3 className="text-lg font-saira text-white mb-4">
             Recent Projects
           </h3>
-          <div className="grid grid-cols-3 gap-4 max-w-xl">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-4 max-w-xl">
             <a href="" className="hover:opacity-80 transition-opacity duration-300 h-25 w-30">
               <img src={service1} alt="Project 1" className="w-full h-full object-cover" />
             </a>
