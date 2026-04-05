@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #374962;
+  --color-secondary: #f7c51e;
+  --color-light: #aec0d5;
+  --font-saira: "Saira Stencil", sans-serif;
+}
