@@ -182,7 +182,7 @@ const ProjectSlider = () => {
 
         <div className="flex flex-wrap gap-4">
           {/* Filters */}
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {["All", "Building", "Constructions", "Project Planning"].map(
               (cat) => (
                 <button

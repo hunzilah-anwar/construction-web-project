@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="font-saira relative overflow-hidden px-16 py-14 flex flex-wrap lg:justify-between justify-center items-center gap-14 border-b border-gray-300">
+      <div className="font-saira relative overflow-hidden sm:px-16 px-10 py-14 flex flex-wrap lg:justify-between justify-center items-center gap-14 border-b border-gray-300">
         <div className="lg:block hidden absolute -right-28 top-0 -z-10 bg-black opacity-[.04] w-[70%] h-full -skew-x-45"></div>
         <Link to="/" className="">
           <img src={logo} className="w-70" alt="Buildify Logo" />
@@ -62,7 +62,7 @@ const Header = () => {
           <RiMenu3Fill
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             size={40}
-            className="cursor-pointer z-50 absolute right-4 top-10 bg-gray-500/30 p-2 transform -translate-y-1/2 border border-gray-400/40 rounded-md text-black hover:text-white transition-all"
+            className="cursor-pointer z-50 absolute right-4 top-8 bg-gray-500/30 p-2 transform -translate-y-1/2 border border-gray-400/40 rounded-md text-black hover:text-white transition-all"
           />
         </div>
       </div>
