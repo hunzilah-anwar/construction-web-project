@@ -10,6 +10,73 @@ import { BiSearch } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const Project = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "London Bank Headquarter",
+      category: "Bank, Buildling",
+      image: PostImage1,
+      link: "/project/london-bank-headquarter",
+    },
+    {
+      id: 2,
+      title: "International Airport",
+      category: "Airport, Construction",
+      image: PostImage2,
+      link: "/project/international-airport",
+    },
+    {
+      id: 3,
+      title: "Solar Roof Installation",
+      category: "Power Source, Solar",
+      image: PostImage3,
+      link: "/project/solar-roof-installation",
+    },
+    {
+      id: 4,
+      title: "AK Copper Mine",
+      category: "Mining",
+      image: service1,
+      link: "/project/ak-copper-mine",
+    },
+    {
+      id: 5,
+      title: "Mega Mall Construction",
+      category: "Building, Mall",
+      image: service2,
+      link: "/project/mega-mall-construction",
+    },
+    {
+      id: 6,
+      title: "High Way Repaired",
+      category: "Highway, Reparing",
+      image: service3,
+      link: "/project/highway-repaired",
+    },
+    {
+      id: 7,
+      title: "Shanghai Arena",
+      category: "Arena, Stadium",
+      image: service1,
+      link: "/project/shanghai-arena",
+    },
+    {
+      id: 8,
+      title: "GoodLayers Headquater",
+      category: "Building, Construction",
+      image: service2,
+      link: "/project/goodlayers-headquarter",
+    },
+    {
+      id: 9,
+      title: "Piping System Engineering",
+      category: "Piping, Planning",
+      image: service3,
+      link: "/project/piping-system-engineering",
+    },
+  ];
+
+
   return (
     <>
       <section
@@ -29,172 +96,26 @@ const Project = () => {
       </section>
       <section className="max-w-5xl m-auto py-20 px-4">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-0 gap-10">
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={PostImage1}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {projects.map((project) => (
+            <div key={project.id} className="mb-8">
+              <div className="relative group overflow-hidden mb-4">
+                <img
+                  src={project.image}
+                  alt=""
+                  className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
+                />
+                <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
+                <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <Link
+                to={project.link}
+                className="font-saira text-xl font-bold"
+              >
+                {project.title}
+              </Link>
+              <h6 className="text-sm text-gray-400 mt-1 italic">{project.category}</h6>
             </div>
-            <Link
-              to="/project/london-bank-headquarter"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              London Bank Headquarter
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Bank, Buildling</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={PostImage2}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/international-airport"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              International Airport
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">
-              Airport, Construction
-            </h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={PostImage3}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/solar-roof-installation"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              Solar Roof Installation
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Power Source, Solar</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service1}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/ak-copper-mine"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              AK Copper Mine
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Mining</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service2}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/mega-mall-construction"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              Mega Mall Construction
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Building, Mall</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service3}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/highway-repaired"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              High Way Repaired
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Highway, Reparing</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service1}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/shanghai-arena"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              Shanghai Arena
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Arena, Stadium</h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service2}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/goodlayers-headquarter"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              GoodLayers Headquater
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">
-              Building, Construction
-            </h6>
-          </div>
-          <div className="mb-6">
-            <div className="relative group overflow-hidden">
-              <img
-                src={service3}
-                alt=""
-                className="w-full h-60 object-cover group-hover:scale-[1.1] transition ease-in-out duration-500"
-              />
-              <div className="absolute top-0 right-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 transition-opacity duration-300"></div>
-              <BiSearch className="absolute inset-0 cursor-pointer m-auto text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <Link
-              to="/project/piping-system-engineering"
-              className="font-saira text-xl font-bold mt-4"
-            >
-              Piping System Engineering
-            </Link>
-            <h6 className="text-sm text-gray-400 mt-1">Piping, Planning</h6>
-          </div>
+          ))}
         </div>
       </section>
     </>
