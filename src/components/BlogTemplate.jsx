@@ -8,7 +8,7 @@ const BlogTemplate = ({ blogs }) => {
 
   return (
     <div>
-      <div className="max-w-5xl m-auto py-20 px-10 grid grid-cols-1 gap-16">
+      <div className="max-w-5xl m-auto py-20 px-5 grid grid-cols-1 gap-16">
         {blogs.map((blog) => (
           <div key={blog.id} className="overflow-hidden">
             <img
